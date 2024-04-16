@@ -2,6 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios'
+import { Marker } from 'react-leaflet';
 
 const redIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
@@ -70,7 +71,9 @@ function MapComponent({location}) {
           {pharmacies.map((pharmacy, index) => (
             <Marker key={index} position={[pharmacy.location.lat, pharmacy.location.lng]}>
               <Popup>
-                {pharmacy.name}
+                <h3>Name : {pharmacy.name}</h3>
+                <h3>Distance : {pharmacy.distance}</h3>
+                <h3>Address : {pharmacy.address}</h3>
               </Popup>
             </Marker>
           ))}
