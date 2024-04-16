@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios'
-import { Marker } from 'react-leaflet';
+
 
 const redIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
@@ -13,6 +13,16 @@ const redIcon = new L.Icon({
     shadowSize: [41, 41],
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png'
 });
+const blueIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+  iconRetinaUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png'
+});
+
 
 function MapComponent({location}) {
     const [currentLocation, setCurrentLocation] = useState(null);
@@ -69,7 +79,7 @@ function MapComponent({location}) {
             </Popup>
           </Marker>
           {pharmacies.map((pharmacy, index) => (
-            <Marker key={index} position={[pharmacy.location.lat, pharmacy.location.lng]}>
+            <Marker key={index} position={[pharmacy.location.lat, pharmacy.location.lng]} icon={blueIcon}>
               <Popup>
                 <h3>Name : {pharmacy.name}</h3>
                 <h3>Distance : {pharmacy.distance}</h3>
