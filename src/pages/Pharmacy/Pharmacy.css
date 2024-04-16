@@ -1,0 +1,14 @@
+
+.inner-container{
+    height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    background-image: url('https://i.pinimg.com/originals/bd/4e/c7/bd4ec7d3e70257653cb069fc46a8a616.jpg'); 
+    background-size: cover;
+    background-position: center;
+    align-items:center;
+    justify-content:center;
+
+
+}

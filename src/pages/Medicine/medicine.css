@@ -1,0 +1,82 @@
+.medicine-container {
+  height:100vh;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  background-image: url('https://i.pinimg.com/originals/bd/4e/c7/bd4ec7d3e70257653cb069fc46a8a616.jpg'); 
+  background-size: cover;
+  background-position: center;
+  align-items:center;
+  
+  }
+  
+  .medform {
+    margin-top:10%;
+    margin-bottom: 20px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+    
+
+
+  }
+  
+ .medicine{
+  width:50%;
+  height:2rem;
+  border-radius:2rem;
+  border:none;
+  outline:none;
+  background-color:rgb(0,0,0,0.7);
+  color:white;
+  padding:20px;
+  font-size:25px;
+  border:2px solid white;
+
+ }
+  
+  .medbutton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    width:8rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius:1rem;
+    height:3rem;
+    width:10%;
+    
+
+  }
+  
+  .medbutton:hover {
+    background-color: #0056b3;
+  }
+  
+  .medicine-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color:rgb(250,250,250,0.7);
+  }
+
+  .medicine-details p{
+    color:black;
+  }
+  
+  .medicine-details h2 {
+    margin-top: 0;
+  }
+  
+  .loading {
+    margin-top: 20px;
+  }
+  
+  .error {
+    margin-top: 20px;
+    color: red;
+  }
+  
