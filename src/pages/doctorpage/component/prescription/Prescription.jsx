@@ -37,7 +37,7 @@ const Prescription = ({ setOpen, patient ,id }) => {
       formData.user = userid;
       formData.patient = patient; // Add patient value to the formData
       formData.report=id;
-      const response = await axios.post('http://localhost:8100/api/prescription/create', formData);
+      const response = await axios.post('https://medilocker-backend.onrender.com/api/prescription/create', formData);
       console.log(response.data);
       alert("Prescription added successfully")
 //to clear the details

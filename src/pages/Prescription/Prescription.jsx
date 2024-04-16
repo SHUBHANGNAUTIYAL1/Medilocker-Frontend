@@ -19,14 +19,14 @@ function Prescription() {
   const user = JSON.parse(localStorage.getItem('user'));
   console.log(user)
   
-  const { data, loading, error } = useFetch(`http://localhost:8100/api/prescription/pres/${user._id}`);
+  const { data, loading, error } = useFetch(`https://medilocker-backend.onrender.com/api/prescription/pres/${user._id}`);
  console.log(data);
 
 
  const deleteDocument = async (docId) => {
   try {
     
-    await axios.delete(`http://localhost:8100/api/report/${docId}`);
+    await axios.delete(`https://medilocker-backend.onrender.com/api/report/${docId}`);
     
     window.location.reload();
   } catch (error) {

@@ -24,8 +24,8 @@ function Consultant() {
   //console.log(Useremail)
 
   
-  const { data, loading, error }= useFetch(`http://localhost:8100/api/report/patient/${UserId}`);
-  const { data1, loading1, error1 }= usefe(`http://localhost:8100/api/report/`);
+  const { data, loading, error }= useFetch(`https://medilocker-backend.onrender.com/api/report/patient/${UserId}`);
+  const { data1, loading1, error1 }= usefe(`https://medilocker-backend.onrender.com/api/report/`);
   const aeskey="YourSecretKey";
   console.log(data1)
 
@@ -44,7 +44,7 @@ function Consultant() {
  const deleteDocument = async (docId) => {
   try {
     
-    await axios.delete(`http://localhost:8100/api/agreement/${docId}`);
+    await axios.delete(`https://medilocker-backend.onrender.com/api/agreement/${docId}`);
     
     window.location.reload();
   } catch (error) {

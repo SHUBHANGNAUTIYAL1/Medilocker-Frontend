@@ -11,13 +11,13 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const NewAgreement = ({ setOpen }) => {
     const user = JSON.parse(localStorage.getItem('user'));
     const useremail=user.email;
-    const { data, loading, error } = useFetch(`http://localhost:8100/api/agreement/request/${useremail}`);
+    const { data, loading, error } = useFetch(`https://medilocker-backend.onrender.com/api/agreement/request/${useremail}`);
     console.log(data);
 
     const deleteDocument = async (docId) => {
         try {
           
-          await axios.delete(`http://localhost:8100/api/agreement/${docId}`);
+          await axios.delete(`https://medilocker-backend.onrender.com/api/agreement/${docId}`);
           
           window.location.reload();
         } catch (error) {
@@ -27,7 +27,7 @@ const NewAgreement = ({ setOpen }) => {
       const updateAgreement = async (docId) => {
         try {
           
-          await axios.put(`http://localhost:8100/api/agreement/update/${docId}`,{
+          await axios.put(`https://medilocker-backend.onrender.com/api/agreement/update/${docId}`,{
             status:true
           });
           

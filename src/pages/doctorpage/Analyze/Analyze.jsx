@@ -7,7 +7,7 @@ import Chart from 'chart.js/auto';
 import './Analyze.css'
 
 function Analyze() {
-    const { data1, loading1 } = usefe(`http://localhost:8100/api/auth/`);
+    const { data1, loading1 } = usefe(`https://medilocker-backend.onrender.com/api/auth/`);
     const [selectedPatient, setSelectedPatient] = useState('');
     const [reports, setReports] = useState([]);
     const [bpData, setBpData] = useState([]);
@@ -22,7 +22,7 @@ function Analyze() {
     useEffect(() => {
         if (selectedPatient) {
             
-            axios.get(`http://localhost:8100/api/report/user/${selectedPatient}`)
+            axios.get(`https://medilocker-backend.onrender.com/api/report/user/${selectedPatient}`)
                 .then(response => {
                     setReports(response.data.Repo);
                 })

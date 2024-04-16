@@ -8,7 +8,7 @@ import useFetch from "../../hook/useFetch";
 const Pres = ({ setOpen, item }) => {
   const user = JSON.parse(localStorage.getItem('user'));
     console.log(item._id);
-    const { data, loading, error } = useFetch(`http://localhost:8100/api/prescription/report/${item._id}`);
+    const { data, loading, error } = useFetch(`https://medilocker-backend.onrender.com/api/prescription/report/${item._id}`);
     console.log(data.Pres);
   
 

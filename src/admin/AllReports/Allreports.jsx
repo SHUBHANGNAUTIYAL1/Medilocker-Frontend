@@ -19,7 +19,7 @@ function Allreports() {
 
     const user = JSON.parse(localStorage.getItem('user'));
     
-    const { data, loading, error }= useFetch(`http://localhost:8100/api/report/`);
+    const { data, loading, error }= useFetch(`https://medilocker-backend.onrender.com/api/report/`);
     //const { data1, loading1, error1 }= usefe(`http://localhost:8100/api/agreement/`);
     //const users=data.docs.user;
    // console.log(users.username)
@@ -27,7 +27,7 @@ function Allreports() {
    const deleteDocument = async (docId) => {
     try {
       
-      await axios.delete(`http://localhost:8100/api/report/${docId}`);
+      await axios.delete(`https://medilocker-backend.onrender.com/api/report/${docId}`);
       
       window.location.reload();
       

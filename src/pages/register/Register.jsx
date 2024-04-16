@@ -28,7 +28,7 @@ function Register() {
             const newUser={
                 ...formData
             }
-            const response=await axios.post("http://localhost:8100/api/auth/register", newUser);
+            const response=await axios.post("https://medilocker-backend.onrender.com/api/auth/register", newUser);
             console.log(response)
             
            navigate("/"); 

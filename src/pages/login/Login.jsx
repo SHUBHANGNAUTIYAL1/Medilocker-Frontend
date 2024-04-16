@@ -24,7 +24,7 @@ function Login() {
       e.preventDefault();
     
       try {
-        const res = await axios.post("http://localhost:8100/api/auth/login", credentials);
+        const res = await axios.post("https://medilocker-backend.onrender.com/api/auth/login", credentials);
       localStorage.setItem('user',JSON.stringify(res.data))
         const role=res.data.role
         console.log(role)

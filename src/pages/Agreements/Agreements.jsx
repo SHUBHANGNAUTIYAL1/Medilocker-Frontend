@@ -20,14 +20,14 @@ function Agreements() {
   console.log(Useremail)
 
   
-  const { data, loading, error } = useFetch(`http://localhost:8100/api/agreement/${user._id}`);
+  const { data, loading, error } = useFetch(`https://medilocker-backend.onrender.com/api/agreement/${user._id}`);
 
   console.log(data.agree)
 
  const deleteDocument = async (docId) => {
   try {
     
-    await axios.delete(`http://localhost:8100/api/agreement/${docId}`);
+    await axios.delete(`https://medilocker-backend.onrender.com/api/agreement/${docId}`);
     
     window.location.reload();
   } catch (error) {

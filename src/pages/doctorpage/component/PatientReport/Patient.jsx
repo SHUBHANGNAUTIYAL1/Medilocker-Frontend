@@ -19,7 +19,7 @@ const Patient = ({ setOpen ,item }) => {
   
   const user = JSON.parse(localStorage.getItem('user'));
   const userid=user._id;
-  const { data, loading, error }= useFetch(`http://localhost:8100/api/report/${item}`);
+  const { data, loading, error }= useFetch(`https://medilocker-backend.onrender.com/api/report/${item}`);
   console.log(item)
    
   const decryptFileUrl = (encryptedFile, key) => {

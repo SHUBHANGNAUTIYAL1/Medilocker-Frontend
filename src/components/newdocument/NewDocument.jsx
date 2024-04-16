@@ -10,8 +10,8 @@ const NewDocument = ({ setOpen }) => {
   
   const user = JSON.parse(localStorage.getItem('user'));
   const userid=user._id;
-  const { data, loading, error }= useFetch(`http://localhost:8100/api/auth/`);
-  const {data1,loading1,error1}=usefe(`http://localhost:8100/api/auth/user/${userid}`)
+  const { data, loading, error }= useFetch(`https://medilocker-backend.onrender.com/api/auth/`);
+  const {data1,loading1,error1}=usefe(`https://medilocker-backend.onrender.com/api/auth/user/${userid}`)
   console.log(data1);
    
     const [file, setFile] = useState(null);
