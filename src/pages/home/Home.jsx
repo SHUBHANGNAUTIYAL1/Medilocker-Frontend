@@ -22,7 +22,7 @@ function Home() {
   console.log(user)
   const aeskey="YourSecretKey";
   
-  const { data, loading, error } = useFetch(`http://localhost:8100/api/report/user/${user._id}`);
+  const { data, loading, error } = useFetch(`https://medilocker-backend.onrender.com/api/report/user/${user._id}`);
  console.log(data);
 
  const decryptFileUrl = (encryptedFile, key) => {
@@ -35,7 +35,7 @@ function Home() {
  const deleteDocument = async (docId) => {
   try {
     
-    await axios.delete(`http://localhost:8100/api/report/${docId}`);
+    await axios.delete(`https://medilocker-backend.onrender.com/api/report/${docId}`);
     
     window.location.reload();
   } catch (error) {
